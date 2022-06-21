@@ -39,8 +39,9 @@ output_path(可选, 默认为"混淆文件名_output.js"): 文件输出路径
 
 > 具体的代码样子请看对应的文件
 
-| 序号 | 插件名                                          | 插件代码                                                     | 代码对比                                                     |
-| ---- | ----------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1    | ObjectVisit - 更改对象属性访问方式              | [混淆插件A](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/ObjectVisitA.js)｜[还原插件B](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/ObjectVisitB.js) | [代码对比](https://github.com/Mankvis/mk-ast-tool/blob/main/tutorial/diff/ObjectVisit.js) |
-| 2    | InnerObjectVisit - 更改系统内置对象属性访问方式 | [混淆插件A](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/InnerObjectVisitA.js)｜[还原插件B](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/InnerObjectVisitB.js) | [代码对比](https://github.com/Mankvis/mk-ast-tool/blob/main/tutorial/diff/InnerObjectVisit.js) |
+| 序号 | 插件名                                          | 插件代码                                                     | 代码对比                                                     | 文章 |
+| ---- | ----------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| 1    | ObjectVisit - 更改对象属性访问方式              | [混淆插件A](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/ObjectVisitA.js)｜[还原插件B](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/ObjectVisitB.js) | [代码对比](https://github.com/Mankvis/mk-ast-tool/blob/main/tutorial/diff/ObjectVisit.js) | -    |
+| 2    | InnerObjectVisit - 更改系统内置对象属性访问方式 | [混淆插件A](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/InnerObjectVisitA.js)｜[还原插件B](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/InnerObjectVisitB.js) | [代码对比](https://github.com/Mankvis/mk-ast-tool/blob/main/tutorial/diff/InnerObjectVisit.js) | -    |
+| 3    | UnicodeEscapeSequence - 字符串与Unicode互相转换 | [混淆插件A](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/UnicodeEscapeSequence.js)｜[还原插件B](https://github.com/Mankvis/mk-ast-tool/blob/main/plugins/tutorial/UnicodeEscapeSequenceB.js) | [代码对比](https://github.com/Mankvis/mk-ast-tool/blob/main/tutorial/diff/UnicodeEscapeSequence.js) |      |
 
