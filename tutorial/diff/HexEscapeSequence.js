@@ -11,12 +11,12 @@ Date.prototype.format = function (formatStr) {
   let str = formatStr;
   let Week = ["\u65e5", "\u4e00", "\u4e8c", "\u4e09", "\u56db", "\u4e94", "\u516d"];
   str = str.replace(/yyyy|YYYY/, this.getFullYear());
-  str = str.replace(/MM/, this.getMonth() + 1 > 9 ? (this.getMonth() + 1).toString() : "\u0030" + (this.getMonth() + 1));
-  str = str.replace(/dd|DD/, this.getDate() + 1 > 9 ? (this.getDate() + 1).toString() : "\u0030" + (this.getDate() + 1));
+  str = str.replace(/MM/, this.getMonth() + 0x1 > 0x9 ? (this.getMonth() + 0x1).toString() : "\x30" + (this.getMonth() + 0x1));
+  str = str.replace(/dd|DD/, this.getDate() + 0x1 > 0x9 ? (this.getDate() + 0x1).toString() : "\x30" + (this.getDate() + 0x1));
   return str;
 };
 
-console.log(new Date().format("\u0079\u0079\u0079\u0079\u002d\u004d\u004d\u002d\u0064\u0064"));
+console.log(new Date().format("\x79\x79\x79\x79\x2d\x4d\x4d\x2d\x64\x64"));
 
 /** 还原后 */
 Date.prototype.format = function (formatStr) {
