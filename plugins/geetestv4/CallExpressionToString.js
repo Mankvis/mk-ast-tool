@@ -76,13 +76,28 @@ function fix(path) {
     const name2 = declarations[2].id.name;
     callArray.push(name1, name2);
 
+    // 极验3代添加
+    callArray.push(global.headCallArray[2])
+
     path.getNextSibling().remove();
     path.getNextSibling().remove();
     path.remove();
     // 把 $_BHHHA(16) 这样的调用转换成字符串
-  } else if (types.isCallExpression(node) && node.callee !== undefined && node.callee.name !== undefined) {
+  } else if (types.isCallExpression(node) && ((node.callee !== undefined && node.callee.name !== undefined) || (
+    // 极验3代添加
+    node.callee !== undefined && node.callee.object && node.callee.object.name === global.headObjName
+  ))) {
+
+    let name = node.callee.name;
+    if (node.callee.object && node.callee.object.name === global.headObjName) {
+      if (!node.arguments) {
+        return;
+      }
+      name = node.callee.property.name
+    }
+
     // 如果当前节点callee.name不存在之前获取到call名字数组内,则忽略
-    if (callArray.indexOf(node.callee.name) === -1) {
+    if (callArray.indexOf(name) === -1) {
       return;
     }
     // 调用函数获取计算后到值
