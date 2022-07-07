@@ -18,6 +18,8 @@ const UnicodeEscapeSequenceA = require("../plugins/tutorial/UnicodeEscapeSequenc
 const UnicodeEscapeSequenceB = require("../plugins/tutorial/UnicodeEscapeSequenceB");
 const HexEscapeSequenceA = require("../plugins/tutorial/HexEscapeSequenceA");
 const HexEscapeSequenceB = require("../plugins/tutorial/HexEscapeSequenceB");
+const NumericalConstantsA = require("../plugins/tutorial/NumericalConstantsA");
+const NumericalConstantsB = require("../plugins/tutorial/NumericalConstantsB");
 
 
 function fixHandle(sourceContent) {
@@ -42,8 +44,12 @@ function fixHandle(sourceContent) {
   /** 字符串转hex */
   // traverse(ast, HexEscapeSequenceA.fix);
   /** 还原-字符串转hex */
-  traverse(ast, HexEscapeSequenceB.fix);
+  // traverse(ast, HexEscapeSequenceB.fix);
 
+  /** 数值常量混淆 */
+  // traverse(ast, NumericalConstantsA.fix);
+  /** 数值常量还原 */
+  traverse(ast, NumericalConstantsB.fix);
 
   const opts = {
     jsescOption: { "minimal": true }
