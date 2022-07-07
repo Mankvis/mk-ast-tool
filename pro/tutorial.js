@@ -49,7 +49,7 @@ function fixHandle(sourceContent) {
   /** 数值常量混淆 */
   // traverse(ast, NumericalConstantsA.fix);
   /** 数值常量还原 */
-  traverse(ast, NumericalConstantsB.fix);
+  // traverse(ast, NumericalConstantsB.fix);
 
   const opts = {
     jsescOption: { "minimal": true }
